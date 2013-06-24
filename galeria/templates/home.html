@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Galeria</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+</head>
+<body>
+	<h1>Mi Galeria</h1>
+	<section>
+		{% for foto in fotos %}
+		<figure>
+			<figcaption>{{ foto.fig_caption }}</figcaption>
+			<img src="{{ MEDIA_URL }}{{ foto.img }}" alt="">
+			<figcaption>{{ foto.img_date }}</figcaption>
+		</figure>
+		{% endfor %}
+	</section>
+</body>
+</html>
