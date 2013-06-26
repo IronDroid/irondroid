@@ -1,4 +1,8 @@
 from django.contrib import admin
-from galeria.models import Foto
+from galeria.models import Foto, Comentario
 
-admin.site.register(Foto)
+class FotoAdmin(admin.ModelAdmin):
+	fields = ['img', 'fig_caption']
+
+admin.site.register(Foto, FotoAdmin)
+admin.site.register(Comentario)

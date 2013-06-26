@@ -1,6 +1,6 @@
 # Django settings for irondroid project.
 
-# Identificando la ruta del proyecto
+# Identificando la ruta del proyecto.
 import os
 RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
 
@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'galeria',
+    'sorl.thumbnail',
 )
 
 # A sample logging configuration. The only tangible logging
