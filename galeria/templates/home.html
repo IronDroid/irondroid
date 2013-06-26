@@ -15,7 +15,7 @@
 		{% for foto in fotos %}
 			<figure>
 				<figcaption>{{ foto.fig_caption }}</figcaption>
-				<a href="{% url 'detail' foto.id %}">
+				<a href="{{ url foto.get_absolute_url }}">
 				{% thumbnail foto.img "300x200" crop="center" as im %}
 			    	<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
 				{% endthumbnail %}
