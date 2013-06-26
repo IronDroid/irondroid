@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', include('galeria.urls')),
+    url(r'^', include('galeria.urls', namespace="galeria")),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$','django.views.static.serve',
 		{'document_root':settings.MEDIA_ROOT,}),

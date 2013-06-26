@@ -9,16 +9,17 @@
 <body>
 	<header>
 		<h1>Mi Galeria</h1>
+		<a id="button" href="#button">Subir Foto</a>
 	</header>
 	<section>
 		{% for foto in fotos %}
 			<figure>
 				<figcaption>{{ foto.fig_caption }}</figcaption>
+				<a href="{% url 'detail' foto.id %}">
 				{% thumbnail foto.img "300x200" crop="center" as im %}
-				<a href="{% url 'index' %}">
 			    	<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-				</a>
 				{% endthumbnail %}
+				</a>
 				<figcaption>{{ foto.img_date }}</figcaption>
 			</figure>
 		{% endfor %}

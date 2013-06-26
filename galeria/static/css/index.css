@@ -3,14 +3,30 @@ body{
 	font-size: 16px;
 	text-align: center;
 }
+#button{
+	background: #2ecc71;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	font-size: 1.3em;
+	padding: 11px 19px;
+	position: absolute;
+	right: 50px;
+	top: 40px;
+	text-decoration: none;
+	transition: .5s;
+}
+#button:hover{
+	background: #55d98d;
+}
 header{
-	background: #559998;
+	background: #559998 url("../img/esquinita2.jpg") no-repeat right top;
 	padding: 1em .5em;
 	margin: 0;
 }
 section{
 	padding: 0;
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 figure{
