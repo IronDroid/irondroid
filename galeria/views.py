@@ -10,6 +10,3 @@ def index(request):
 
 def detail(request, foto_id):
 	return HttpResponse("foto: " + foto_id)
-
-def foto(request):
-	return HttpResponse("foto: A")

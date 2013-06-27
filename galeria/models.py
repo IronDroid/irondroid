@@ -1,10 +1,15 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 class Foto(models.Model):
 	fig_caption = models.TextField()
 	img = models.ImageField(upload_to="imagenes")
 	img_date = models.DateTimeField(auto_now=True)
 
+	def get_absolute_url(self):
+		print 'REVERSE'
+		return reverse('galeria.views.detail', kwargs={'foto_id': self.id})
+		
 	def __unicode__(self):
 		return self.fig_caption
 
