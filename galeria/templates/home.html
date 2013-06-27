@@ -1,16 +1,6 @@
+{% extends "base.html" %}
 {% load thumbnail %}
-<!doctype html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Galeria</title>
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
-</head>
-<body>
-	<header>
-		<h1>Mi Galeria</h1>
-		<a id="button" href="#button">Subir Foto</a>
-	</header>
+{% block contenido %}
 	<section>
 		{% for foto in fotos %}
 			<figure>
@@ -24,5 +14,4 @@
 			</figure>
 		{% endfor %}
 	</section>
-</body>
-</html>
+{% endblock contenido %}

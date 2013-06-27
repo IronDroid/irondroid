@@ -29,6 +29,9 @@ section{
 	max-width: 1200px;
 	margin: 0 auto;
 }
+section img{
+	max-width: 100%;
+}
 figure{
 	background: #000;
 	color: #fff;
